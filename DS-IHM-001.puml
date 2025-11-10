@@ -1,7 +1,7 @@
 @startuml
 'Parametros de dimensões:
-scale 500 width
-scale 500 height
+scale 750 width
+scale 750 height
 
 'Parametros de cor:
 skinparam backgroundColor #EEEBDC
