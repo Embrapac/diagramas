@@ -44,33 +44,16 @@ legend {
 
 hide footbox
 
-legend top
-  **Diagrama de Sequência - Fluxo Principal**
-end legend
+actor Operador
+participant "Linha de produção" as A
+participant "Contagem em tempo real" as B
+participant "Status do sistema" as C
 
+'======================================================
+'                      Inicio
+'======================================================
 
-'note top
-'  Este é o título ou descrição do diagrama
-'end note
-
-actor "Sensor Óptico"
-
-"Sensor Óptico" -> MCU: Detecta embalagem no início da Esteira
-activate MCU #000000
-MCU             -> MCU: Aciona dispositivo de manobra
-MCU             -> Esteira: Liga Esteira
-"Sensor Óptico" -> MCU: Detecta Embalagem no meio da Esteira
-MCU             -> MCU: Incrementa Contador
-MCU             -> Monitor: Envia dados para o IHM
-MCU             -> "Módulo Edge": Envia dados para Nuvem
-"Sensor Óptico" -> MCU: Detecta Embalagem no Fim da Esteira
-
-
-footer
-  **Casos de Uso cobertos:**
-   - **MC-001** Controle da esteira e atuadores
-   - **MC-002** Contagem de produtos de alta velocidade
-   - **MC-005** Leitura de sensores analógicos e digitais
-end footer
-
-@enduml
+'Comando de iniciar/parar:
+Operador -> A: Iniciar/Parar
+activate A
+'------------------------------------------------------
