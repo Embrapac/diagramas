@@ -1,0 +1,70 @@
+@startuml
+
+<style>
+footer {
+  HorizontalAlignment left
+  FontSize 14
+  FontColor blue
+  FontName Arial
+  Margin 20
+  Padding 10
+}
+
+legend {
+  HorizontalAlignment center
+  FontSize 16
+  FontColor Blue
+  FontName Arial
+  Margin 20
+  Padding 10
+}
+</style>
+
+
+
+'Parametros de cor:
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+skinparam sequenceArrowColor DeepSkyBlue
+skinparam sequenceActorBorderColor DeepSkyBlue
+skinparam sequenceLifeLineBorderColor blue
+skinparam sequenceLifeLineBackgroundColor #A9DCDF
+skinparam sequenceParticipantBorderColor DeepSkyBlue
+skinparam sequenceParticipantBackgroundColor DodgerBlue
+skinparam sequenceParticipantFontName Impact
+skinparam sequenceParticipantFontSize 17
+skinparam sequenceParticipantFontColor #A9DCDF
+skinparam sequenceActorBackgroundColor aqua
+skinparam sequenceActorFontColor DeepSkyBlue
+skinparam sequenceActorFontSize 17
+skinparam sequenceActorFontName Aapex
+
+autoactivate on
+Hide footbox
+actor Usuário
+Usuário -> MCU : Aciona o botão de parada
+hnote over Esteira : Ligada
+MCU -> MCU : Dispositivo de manobra
+MCU -> Esteira : Desliga esteira
+hnote over Esteira : Desligada
+return Atualiza o display
+MCU -> MCU : Emite sinal sonoro e luminoso
+MCU -> Monitor : Envia dados para o IHM
+Monitor -> Usuário : Exibe status da esteira
+hnote over Esteira : Manutenção
+Usuário -> Monitor : Rearme pelo IHM
+hnote over Esteira : Ligada
+
+legend top
+ **Fluxograma de Operação do Módulo de Controle (MC)**
+end legend
+
+footer
+
+
+  **Casos de Uso cobertos:**
+   **- MC-003:** Lógica de Segurança (NR-12)
+end footer  
+
+
+@enduml
