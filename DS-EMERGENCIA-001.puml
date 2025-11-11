@@ -4,19 +4,18 @@
 footer {
   HorizontalAlignment left
   FontSize 14
-  FontColor blue
+  FontColor DodgerBlue
   FontName Arial
   Margin 20
   Padding 10
 }
-
 legend {
   HorizontalAlignment center
-  FontSize 16
-  FontColor Blue
+  FontSize 20
+  FontColor DodgerBlue
   FontName Arial
   Margin 20
-  Padding 10
+  Padding 20
 }
 </style>
 
@@ -56,7 +55,7 @@ Usuário -> Monitor : Rearme pelo IHM
 hnote over Esteira : Ligada
 
 legend top
- **Fluxograma de Operação do Módulo de Controle (MC)**
+ **Diagrama de Sequência - Módulo de Controle (MC) - Emergência**
 end legend
 
 footer

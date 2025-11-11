@@ -20,10 +20,6 @@ skinparam sequenceActorFontColor DeepSkyBlue
 skinparam sequenceActorFontSize 17
 skinparam sequenceActorFontName Aapex
 
-skinparam legendFontColor DodgerBlue
-skinparam legendFontSize 16
-skinparam legndFontName Arial
-
 <style>
 footer {
   HorizontalAlignment left
@@ -34,6 +30,7 @@ footer {
   Padding 10
 }
 legend {
+  HorizontalAlignment center
   FontSize 20
   FontColor DodgerBlue  
   FontName Arial
