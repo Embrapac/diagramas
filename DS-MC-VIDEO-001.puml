@@ -1,0 +1,72 @@
+@startuml
+
+<style>
+footer {
+  HorizontalAlignment left
+  FontSize 14
+  FontColor blue
+  FontName Arial
+  Margin 20
+  Padding 10
+}
+
+legend {
+  HorizontalAlignment center
+  FontSize 16
+  FontColor Blue
+  FontName Arial
+  Margin 20
+  Padding 10
+}
+</style>
+
+
+'Parametros de cor:
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+skinparam sequenceArrowColor DeepSkyBlue
+skinparam sequenceActorBorderColor DeepSkyBlue
+skinparam sequenceLifeLineBorderColor blue
+skinparam sequenceLifeLineBackgroundColor #A9DCDF
+skinparam sequenceParticipantBorderColor DeepSkyBlue
+skinparam sequenceParticipantBackgroundColor DodgerBlue
+skinparam sequenceParticipantFontName Impact
+skinparam sequenceParticipantFontSize 17
+skinparam sequenceParticipantFontColor #A9DCDF
+skinparam sequenceActorBackgroundColor aqua
+skinparam sequenceActorFontColor DeepSkyBlue
+skinparam sequenceActorFontSize 17
+skinparam sequenceActorFontName Aapex
+
+autoactivate on
+Hide footbox
+
+participant "PIC32MK WiFi\n(MC)" as MCU
+participant Câmera
+participant "Módulo Edge\n(Buffer/RTSP Server)" as EDGE
+participant "MDC/SCADA\n(Análise Remota)" as MDC
+
+Câmera -> EDGE : 1. Envio contínuo de stream de vídeo
+hnote over Câmera, EDGE : EDGE mantém buffer (10s pré-falha)
+
+MCU -> EDGE : 2. Sinaliza Falha Crítica Detectada
+EDGE -> EDGE : 3. Salva 10s de buffer pré-falha
+EDGE -> Câmera : 4. Continua gravando por 5s (Pós-falha)
+EDGE -> EDGE : 5. Codifica clipe salvo (H.264)
+EDGE -> EDGE : 6. Prepara para disponibilização (RTSP)
+
+MDC -> EDGE : 7. Solicita stream de vídeo de falha (Sob Demanda)
+
+EDGE -> MDC : 8. Inicia stream de vídeo (RTSP)
+
+legend top
+ **Fluxograma de Operação: Captura de Vídeo (MC-007)**
+end legend
+
+footer
+  **Casos de Uso cobertos:**
+   - **MC-007**: Captura de Vídeo para Análise de Falhas
+   - **EDG-005**: Análise de Vídeo em Tempo Real (Pré-requisito para acionamento)
+end footer  
+
+@enduml

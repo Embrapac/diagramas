@@ -1,0 +1,74 @@
+@startuml
+
+<style>
+footer {
+  HorizontalAlignment left
+  FontSize 14
+  FontColor blue
+  FontName Arial
+  Margin 20
+  Padding 10
+}
+
+legend {
+  HorizontalAlignment center
+  FontSize 16
+  FontColor Blue
+  FontName Arial
+  Margin 20
+  Padding 10
+}
+</style>
+
+
+'Parametros de cor:
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+skinparam sequenceArrowColor DeepSkyBlue
+skinparam sequenceActorBorderColor DeepSkyBlue
+skinparam sequenceLifeLineBorderColor blue
+skinparam sequenceLifeLineBackgroundColor #A9DCDF
+skinparam sequenceParticipantBorderColor DeepSkyBlue
+skinparam sequenceParticipantBackgroundColor DodgerBlue
+skinparam sequenceParticipantFontName Impact
+skinparam sequenceParticipantFontSize 17
+skinparam sequenceParticipantFontColor #A9DCDF
+skinparam sequenceActorBackgroundColor aqua
+skinparam sequenceActorFontColor DeepSkyBlue
+skinparam sequenceActorFontSize 17
+skinparam sequenceActorFontName Aapex
+
+autoactivate on
+Hide footbox
+
+participant "PIC32MK WiFi\n(MC)" as MCU
+participant Câmera
+participant "Módulo Edge\n(Processamento/Gateway)" as EDGE
+participant "MDC/Cloud\n(Servidor SFTP)" as MDC
+
+MCU -> Câmera : 1. Produto detectado\n(Ponto de inspeção)
+activate Câmera
+MCU -> EDGE : 2. Comando de Captura Foto (MC-006)
+EDGE -> Câmera : 3. Solicita captura \n($1920\times1080$ px)
+Câmera -> EDGE : 4. Envia imagem RAW
+deactivate Câmera
+
+EDGE -> EDGE : 5. Processa imagem (Compressão JPEG 85%)
+hnote over EDGE : Prepara para transmissão
+
+EDGE -> MDC : 6. Transmite foto via SFTP (criptografado)
+MDC -> EDGE : 7. Confirmação de recebimento (ACK)
+
+EDGE -> MCU : 8. Resposta: Captura e envio concluídos
+note over EDGE, MDC: Tempo total < 2 segundos (MC-006)
+
+legend top
+ **Fluxograma de Operação: Captura de Fotografia (MC-006)**
+end legend
+
+footer
+  **Casos de Uso cobertos:**
+   - **MC-006**: Captura de Fotografia para Controle de Qualidade
+end footer  
+
+@enduml
