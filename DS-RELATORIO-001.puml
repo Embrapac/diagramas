@@ -24,6 +24,7 @@ DB --> Sistema: Retorna dados do turno
 note over Sistema : Processa dados para gerar relatório CSV
 Sistema -> Sistema: Converte dados em formato CSV
 Sistema -> Sistema: Exporta arquivo CSV local
+Sistema -> "Módulo Edge": Envia arquivo CSV para Nuvem
 Sistema --> IHM: Mensagem de confirmação de turno finalizado
 
 footer
