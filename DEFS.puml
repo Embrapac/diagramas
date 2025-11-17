@@ -1,11 +1,13 @@
 @startuml
-'Parametros de dimensões:
-scale 500 width
-scale 500 height
+!option handwritten true
+hide footbox 
 
-'Parametros de cor:
+' Parâmetros de dimensões:
+scale 750 width
+scale 750 height
+
+' Parâmetros de cor e estilo:
 skinparam backgroundColor #EEEBDC
-skinparam handwritten true
 skinparam sequenceArrowColor DeepSkyBlue
 skinparam sequenceActorBorderColor DeepSkyBlue
 skinparam sequenceLifeLineBorderColor blue
@@ -15,8 +17,8 @@ skinparam sequenceParticipantBackgroundColor DodgerBlue
 skinparam sequenceParticipantFontName Impact
 skinparam sequenceParticipantFontSize 17
 skinparam sequenceParticipantFontColor #A9DCDF
-skinparam sequenceActorBackgroundColor aqua
-skinparam sequenceActorFontColor DeepSkyBlue
+skinparam sequenceActorBackgroundColor DeepSkyBlue
+skinparam sequenceActorFontColor DodgerBlue
 skinparam sequenceActorFontSize 17
 skinparam sequenceActorFontName Aapex
 
@@ -41,16 +43,4 @@ legend {
 
 hide footbox
 
-actor Operador
-participant "Linha de produção" as A
-participant "Contagem em tempo real" as B
-participant "Status do sistema" as C
-
-'======================================================
-'                      Inicio
-'======================================================
-
-'Comando de iniciar/parar:
-Operador -> A: Iniciar/Parar
-activate A
-'------------------------------------------------------
+@enduml

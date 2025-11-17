@@ -1,45 +1,5 @@
 @startuml
-'Parametros de dimensões:
-scale 750 width
-scale 750 height
-
-'Parametros de cor:
-skinparam backgroundColor #EEEBDC
-skinparam handwritten true
-skinparam sequenceArrowColor DeepSkyBlue
-skinparam sequenceActorBorderColor DeepSkyBlue
-skinparam sequenceLifeLineBorderColor blue
-skinparam sequenceLifeLineBackgroundColor #A9DCDF
-skinparam sequenceParticipantBorderColor DeepSkyBlue
-skinparam sequenceParticipantBackgroundColor DodgerBlue
-skinparam sequenceParticipantFontName Impact
-skinparam sequenceParticipantFontSize 17
-skinparam sequenceParticipantFontColor #A9DCDF
-skinparam sequenceActorBackgroundColor aqua
-skinparam sequenceActorFontColor DeepSkyBlue
-skinparam sequenceActorFontSize 17
-skinparam sequenceActorFontName Aapex
-
-<style>
-footer {
-  HorizontalAlignment left
-  FontSize 14
-  FontColor DodgerBlue  
-  FontName Arial
-  Margin 20
-  Padding 10
-}
-legend {
-  HorizontalAlignment center
-  FontSize 20
-  FontColor DodgerBlue  
-  FontName Arial
-  Margin 20
-  Padding 20
-}
-</style>
-
-hide footbox
+!include DEFS.puml
 
 legend top
   **Diagrama de Sequência - Módulo de Controle (MC) - Principal**

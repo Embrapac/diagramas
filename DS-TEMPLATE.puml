@@ -1,44 +1,20 @@
 @startuml
-'Parametros de dimensões:
-scale 500 width
-scale 500 height
 
-'Parametros de cor:
-skinparam backgroundColor #EEEBDC
-skinparam handwritten true
-skinparam sequenceArrowColor DeepSkyBlue
-skinparam sequenceActorBorderColor DeepSkyBlue
-skinparam sequenceLifeLineBorderColor blue
-skinparam sequenceLifeLineBackgroundColor #A9DCDF
-skinparam sequenceParticipantBorderColor DeepSkyBlue
-skinparam sequenceParticipantBackgroundColor DodgerBlue
-skinparam sequenceParticipantFontName Impact
-skinparam sequenceParticipantFontSize 17
-skinparam sequenceParticipantFontColor #A9DCDF
-skinparam sequenceActorBackgroundColor aqua
-skinparam sequenceActorFontColor DeepSkyBlue
-skinparam sequenceActorFontSize 17
-skinparam sequenceActorFontName Aapex
+!include DEFS.puml
 
-<style>
-footer {
-  HorizontalAlignment left
-  FontSize 14
-  FontColor DodgerBlue  
-  FontName Arial
-  Margin 20
-  Padding 10
-}
-legend {
-  HorizontalAlignment center
-  FontSize 20
-  FontColor DodgerBlue  
-  FontName Arial
-  Margin 20
-  Padding 20
-}
-</style>
+' --- Definições de atores/participants (aqui, no arquivo de lógica) ---
+actor Operador
+participant "Linha de produção" as A
+participant "Contagem em tempo real" as B
+participant "Status do sistema" as C
 
-hide footbox
+' ======================================================
+'                      Inicio da lógica
+' ======================================================
+Operador -> A: Iniciar/Parar
+activate A
+A -> B: Enviar contagem
+B -> C: Atualizar status
+deactivate A
 
 @enduml

@@ -1,5 +1,5 @@
 @startuml
-!include DS-TEMPLATE.puml
+!include DEFS.puml
 
 legend top
   **Diagrama de Sequência - Módulo de Dados e Conectividade (MDC) - Monitoramento Remoto**
