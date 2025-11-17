@@ -2,7 +2,7 @@
 OUT_DIR = diagramas_svg
 
 # 1. Define os arquivos a serem IGNORADOS
-EXCLUDE_PUML = DEFS.puml EXAMPLE.puml
+EXCLUDE_PUML = DEFS.puml DS-TEMPLATE.puml
 
 # 2. Encontra todos os .puml, EXCETO os ignorados
 SRC_PUML = $(filter-out $(EXCLUDE_PUML), $(wildcard *.puml))
