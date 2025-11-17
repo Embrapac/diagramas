@@ -16,4 +16,8 @@ Parte integrante do fluxo de trabalho do projeto final da residência do CPQD:
 ### DS-RELATORIO-001:
 ![DS-RELATORIO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-RELATORIO-001.svg)
 
+### DS-FOTO-001:
+![DS-FOTO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-FOTO-001.svg)
 
+### DS-VIDEO-001:
+![DS-VIDEO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-MC-VIDEO-001.svg)
