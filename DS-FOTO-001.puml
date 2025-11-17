@@ -64,7 +64,7 @@ hnote over EDGE : Prepara para transmissão
 EDGE -> MDC : Transmite foto via SFTP (criptografado)
 MDC --> EDGE : Confirmação de recebimento (ACK)
 
-EDGE --> MCU : Resposta: Captura e envio concluídos
+EDGE --> MCU : Resposta: Captura \ne envio concluídos
 note over EDGE, MDC: Tempo total < 2 segundos
 
 legend top
