@@ -1,0 +1,28 @@
+@startuml
+!include DS-TEMPLATE.puml
+
+legend top
+  **Diagrama de Sequência - Módulo de Dados e Conectividade (MDC) - Monitoramento Remoto**
+end legend
+
+actor       Supervisor
+boundary    IHM
+control     Sistema
+database    "Banco de Dados" as DB
+
+Supervisor -> IHM: Visualizar status da linha de produção N
+activate IHM
+IHM -> Sistema: Solicita dados da linha de produção N
+activate Sistema
+Sistema -> DB: Consulta dados da linha de produção N
+activate DB
+DB --> Sistema: Retorna dados atuais da linha de produção N
+Sistema --> IHM: Converte dados atuais para formato de visualização
+IHM --> Supervisor: Exibe dados atuais da linha de produção N no dashboard
+
+footer
+  **Casos de Uso cobertos:**
+   - **MDC-002** Monitoramento remoto
+end footer
+
+@enduml

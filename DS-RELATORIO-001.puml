@@ -1,0 +1,35 @@
+@startuml
+!include DS-TEMPLATE.puml
+
+legend top
+  **Diagrama de Sequência - Módulo de Dados e Conectividade (MDC) - Relatório turno**
+end legend
+
+actor       Supervisor
+boundary    IHM
+control     Sistema
+
+Supervisor -> IHM: Define início de turno
+activate IHM
+database "Banco de Dados" as DB
+activate DB
+IHM -> DB : Registra início de turno
+hnote over IHM : Tempo total do turno
+Supervisor -> IHM: Define fim de turno
+IHM -> Sistema: Solicita relatório de produção do turno
+activate Sistema
+Sistema -> DB: Consulta dados do turno
+DB --> Sistema: Retorna dados do turno
+' ID do turno, hora de início/fim, contagem total de produtos e número de paradas por falha.
+note over Sistema : Processa dados para gerar relatório CSV
+Sistema -> Sistema: Converte dados em formato CSV
+Sistema -> Sistema: Exporta arquivo CSV local
+Sistema -> "Módulo Edge": Envia arquivo CSV para Nuvem
+Sistema --> IHM: Mensagem de confirmação de turno finalizado
+
+footer
+  **Casos de Uso cobertos:**
+   - **MDC-001** Geração de relatório de turno
+end footer
+
+@enduml
