@@ -54,7 +54,7 @@ participant "MDC/Cloud\n(Servidor SFTP)" as MDC
 
 MCU -> Câmera : Produto detectado\n(Ponto de inspeção)
 activate Câmera
-EDGE --> Câmera : Solicita captura \n($1920\times1080$ px)
+EDGE --> Câmera : Solicita captura \n(resolução 1920X1080 px)
 Câmera -> EDGE : Envia imagem RAW
 deactivate Câmera
 
@@ -68,7 +68,7 @@ EDGE --> MCU : Resposta: Captura e envio concluídos
 note over EDGE, MDC: Tempo total < 2 segundos
 
 legend top
- **Fluxograma de Operação: Captura de Fotografia (MC-006)**
+ **Diagrama de Sequência - Módulo de Controle (MC) - Foto**
 end legend
 
 footer
