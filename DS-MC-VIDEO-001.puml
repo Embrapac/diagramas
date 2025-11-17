@@ -41,7 +41,7 @@ skinparam sequenceActorFontName Aapex
 autoactivate on
 Hide footbox
 
-participant "PIC32MK WiFi\n(MC)" as MCU
+participant "MCU" as MCU
 participant Câmera
 participant "Módulo Edge\n(Buffer/RTSP Server)" as EDGE
 participant "MDC/SCADA\n(Análise Remota)" as MDC
@@ -50,12 +50,12 @@ Câmera -> EDGE : 1. Envio contínuo de stream de vídeo
 hnote over Câmera, EDGE : EDGE mantém buffer (10s pré-falha)
 
 MCU -> EDGE : 2. Sinaliza Falha Crítica Detectada
-EDGE -> EDGE : 3. Salva 10s de buffer pré-falha
-EDGE -> Câmera : 4. Continua gravando por 5s (Pós-falha)
-EDGE -> EDGE : 5. Codifica clipe salvo (H.264)
-EDGE -> EDGE : 6. Prepara para disponibilização (RTSP)
+EDGE --> EDGE : 3. Salva 10s de buffer pré-falha
+EDGE --> Câmera : 4. Continua gravando por 5s (Pós-falha)
+EDGE --> EDGE : 5. Codifica clipe salvo (H.264)
+EDGE --> EDGE : 6. Prepara para disponibilização (RTSP)
 
-MDC -> EDGE : 7. Solicita stream de vídeo de falha (Sob Demanda)
+MDC --> EDGE : 7. Solicita stream de vídeo de falha (Sob Demanda)
 
 EDGE -> MDC : 8. Inicia stream de vídeo (RTSP)
 
