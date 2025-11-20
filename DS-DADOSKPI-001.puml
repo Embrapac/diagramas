@@ -1,0 +1,23 @@
+@startuml
+!include DEFS.puml
+
+legend top
+  **Diagrama de Sequência - Módulo Edge (EDG) - Processamento de KPIs**
+end legend
+
+participant MCU
+participant "Módulo Edge" as EDGE
+
+MCU -> EDGE: Envia dados
+hnote over MCU, EDGE: dados de contagem e status a cada 1s
+activate EDGE
+EDGE -> EDGE: Calcular KPI de OEE
+note over EDGE: Overall Equipment Effectiveness calculado a cada 5m
+EDGE -> Cloud: Envia dados consolidados para Nuvem
+
+footer
+  **Casos de Uso cobertos:**
+   - **EDG-001** Agregação de Dados e Cálculo de KPI
+end footer
+
+@enduml
