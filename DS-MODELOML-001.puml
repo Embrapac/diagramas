@@ -1,0 +1,28 @@
+@startuml
+!include DEFS.puml
+
+legend top
+  **Diagrama de Sequência - Módulo Edge (EDG) - Processamento Machine Learning**
+end legend
+
+actor Usuário as USER
+participant "Módulo Edge" as EDGE
+
+USER -> EDGE: Deploy remoto de um modelo de ML
+activate EDGE
+EDGE --> USER: Confirmação de deploy
+note over EDGE: A partir de um agendamento pré-definido
+EDGE -> EDGE: Executar modelo de ML
+note over EDGE: Análise do fluxo de dados de sensores
+EDGE -> EDGE: Verifica geração de relatório preditivo
+note over EDGE: Caso anomalia detectada
+EDGE -> Monitor: Notifica usuário sobre resultados
+EDGE -> Cloud: Envia dados consolidados para Nuvem
+
+footer
+  **Casos de Uso cobertos:**
+   - **EDG-003** Execução de Modelos de Manutenção Preditiva
+   - **CLD-003** Treinamento de Modelos de Machine Learning
+end footer
+
+@enduml
