@@ -1,5 +1,5 @@
 @startuml
-!option handwritten true
+'!option handwritten true
 hide footbox 
 
 ' Parâmetros de dimensões:
@@ -7,6 +7,7 @@ scale 750 width
 scale 750 height
 
 ' Parâmetros de cor e estilo:
+skinparam Handwritten true
 skinparam actorStyle awesome
 skinparam backgroundColor #EEEBDC
 skinparam sequenceArrowColor DeepSkyBlue
