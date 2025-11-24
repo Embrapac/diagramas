@@ -46,21 +46,3 @@ Utilize este comando para apagar todos os vetores svg existentes na pasta diagra
 ![DS-RELATORIO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-RELATORIO-001.svg)
 
 <!-- FIM_DA_AUTOMAÇÃO -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

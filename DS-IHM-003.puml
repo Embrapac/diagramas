@@ -19,19 +19,19 @@ parâmetros e reset de falhas).
 activate IHM
 activate MCU
 OP -> IHM: Envio de um comando sem a autorização para execução
-IHM -> OP: A ação inválida é negada
+IHM --> OP: A ação inválida é negada
 hnote over IHM: Recepção e envio de dados
 
 OP -> IHM: Envio de um comando com a autorização para execução
-IHM -> OP: A ação permitida é executada
+IHM --> OP: A ação permitida é executada
 hnote over MCU: Verifica os níveis de autorização do usuário
 
 IHM -> MCU: Envio da demanda
-MCU -> IHM: Se autorizado, permite.
-MCU -> IHM: Se não autorizado, bloqueia.
+MCU --> IHM: Se autorizado, permite.
+MCU --> IHM: Se não autorizado, bloqueia.
 '-----------------------------
 SP -> IHM: Envio de um comando qualquer
-IHM -> SP: A ação é executada
+IHM --> SP: A ação é executada
 deactivate IHM
 
 /'
