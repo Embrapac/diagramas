@@ -72,28 +72,28 @@ all:
 	done
 
 	# Gerar lista dos SVGs gerados (apenas nomes, sem caminho, ordenados)
-	echo "[PUML_WORKBENCH] registrando arquivos SVG em .FILES_LIST.txt..."
-	ls -1 "$(OUT_DIR)"/*.svg | xargs -n1 basename | sort > .FILES_LIST.txt
-	echo "[PUML_WORKBENCH] .FILES_LIST.txt atualizado."
+	echo "[PUML_WORKBENCH] registrando arquivos SVG em script_readme/FILES_LIST.txt..."
+	ls -1 "$(OUT_DIR)"/*.svg | xargs -n1 basename | sort > script_readme/FILES_LIST.txt
+	echo "[PUML_WORKBENCH] script_readme/FILES_LIST.txt atualizado."
 
-	# Gerar .FILES_AUTOMATION.txt com formato específico (ordenado conforme .FILES_LIST.txt)
-	echo "[PUML_WORKBENCH] gerando .FILES_AUTOMATION.txt..."
-	printf "" > .FILES_AUTOMATION.txt
+	# Gerar script_readme/FILES_AUTOMATION.txt com formato específico (ordenado conforme script_readme/FILES_LIST.txt)
+	echo "[PUML_WORKBENCH] gerando script_readme/FILES_AUTOMATION.txt..."
+	printf "" > script_readme/FILES_AUTOMATION.txt
 	while IFS= read -r svgname || [ -n "$$svgname" ]; do
 	  project="$${svgname%.svg}"
-	  printf "### %s:\n" "$$project" >> .FILES_AUTOMATION.txt
-	  printf "![%s](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/%s.svg)\n\n" "$$project" "$$project" >> .FILES_AUTOMATION.txt
-	done < .FILES_LIST.txt
-	echo "[PUML_WORKBENCH] .FILES_AUTOMATION.txt atualizado."
+	  printf "### %s:\n" "$$project" >> script_readme/FILES_AUTOMATION.txt
+	  printf "![%s](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/%s.svg)\n\n" "$$project" "$$project" >> script_readme/FILES_AUTOMATION.txt
+	done < script_readme/FILES_LIST.txt
+	echo "[PUML_WORKBENCH] script_readme/FILES_AUTOMATION.txt atualizado."
 
-	# --- NOVO: garantir permissão e executar script .ADD_IMAGE.sh (se existir)
-	if [ -f "./.ADD_IMAGE.sh" ]; then
-	  echo "[PUML_WORKBENCH] encontrado .ADD_IMAGE.sh — definindo permissão e executando..."
-	  chmod +x ./.ADD_IMAGE.sh || true
-	  ./.ADD_IMAGE.sh || (echo "[PUML_WORKBENCH] .ADD_IMAGE.sh executado com erro" ; exit 6)
-	  echo "[PUML_WORKBENCH] .ADD_IMAGE.sh executado com sucesso."
+	# --- NOVO: garantir permissão e executar script script_readme/ADD_IMAGE.sh (se existir)
+	if [ -f "./script_readme/ADD_IMAGE.sh" ]; then
+	  echo "[PUML_WORKBENCH] encontrado script_readme/ADD_IMAGE.sh — definindo permissão e executando..."
+	  chmod +x ./script_readme/ADD_IMAGE.sh || true
+	  ./script_readme/ADD_IMAGE.sh || (echo "[PUML_WORKBENCH] script_readme/ADD_IMAGE.sh executado com erro" ; exit 6)
+	  echo "[PUML_WORKBENCH] script_readme/ADD_IMAGE.sh executado com sucesso."
 	else
-	  echo "[PUML_WORKBENCH] Aviso: .ADD_IMAGE.sh não encontrado — pulando atualização do README.md."
+	  echo "[PUML_WORKBENCH] Aviso: script_readme/ADD_IMAGE.sh não encontrado — pulando atualização do README.md."
 	fi
 
 	# (post_defs será chamado automaticamente pelo trap EXIT)

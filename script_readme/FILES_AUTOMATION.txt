@@ -1,17 +1,3 @@
-# Repositório para agrupamento dos diagramas do projeto da Embrapac
-Parte integrante do fluxo de trabalho do projeto final da residência do CPQD:
-
-## Instruções de uso do Makefile:
-### make:
-Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg respectivos e salva-los na sub-pasta diagramas_svg.
-
-### make clean:
-Utilize este comando para apagar todos os vetores svg existentes na pasta diagramas_svg.
-
-### Informações geradas via script:
-## Diagramas de sequência:
-
-<!--INICIO_DA_AUTOMAÇÃO -->
 ### DS-EMERGENCIA-001:
 ![DS-EMERGENCIA-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-EMERGENCIA-001.svg)
 
@@ -35,21 +21,4 @@ Utilize este comando para apagar todos os vetores svg existentes na pasta diagra
 
 ### DS-RELATORIO-001:
 ![DS-RELATORIO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-RELATORIO-001.svg)
-
-<!-- FIM_DA_AUTOMAÇÃO -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
