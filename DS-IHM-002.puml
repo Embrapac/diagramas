@@ -1,41 +1,30 @@
 @startuml
 !include DEFS.puml
 
-actor Operador
-participant "Linha de produção" as A
-participant "Contagem em tempo real" as B
-participant "Status do sistema" as C
+actor "Operador"
+boundary "IHM"
+entity "Medição de grandezas" as MG
+participant "MCU"
+
+/'
+O sistema DEVE exibir alarmes de falha. Será considerado atendido
+quando uma falha no MC (ex: motor travado) gerar uma mensagem textual
+clara na IHM, acompanhada de um alarme sonoro e visual, em menos de 2
+segundos após a ocorrência.
+'/
 
 '======================================================
 '                      Inicio
 '======================================================
+activate MCU
+MG -> MCU: Repasse dos dados
+MCU -> IHM: Exibição
+IHM -> "Operador": Visualização
+deactivate MCU
 
-'Comando de iniciar/parar:
-Operador -> A: Iniciar/Parar
-activate A
-'------------------------------------------------------
+hnote over MCU: Processamento das informações
 
-'Solicitar Contagem
-Operador -> B: Solicitar
-activate B
-'------------------------------------------------------
-
-'Solicitar o Status 
-Operador-> C: Solicitar
-activate C
-'------------------------------------------------------
-
-C --> Operador: Mostrar Status
-deactivate C
-'------------------------------------------------------
-
-B --> Operador: Mostrar a contagem
-deactivate B
-'------------------------------------------------------
-
-A --> Operador: Operação finalizada
-deactivate A
-'------------------------------------------------------
+hnote over IHM: Em menos de 2s a notificação sonora/visual ocorre através da IHM
 
 
 '=====================================================
@@ -50,7 +39,7 @@ footer
 
 
 **Casos de Uso cobertos**:
- - **MIO-001** Interface de operação (IHM)
+ - **MIO-002** Exibição de Alarmes
 end footer
 
 
