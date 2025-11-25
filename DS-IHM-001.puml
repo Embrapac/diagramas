@@ -22,21 +22,23 @@ atendido quando a IHM permitir a um operador autenticado:
 activate Z
 activate ST
 activate IHM
-hnote over Z: Verifica os níveis de \n autorização do usuário.
 OP -> IHM: Iniciar/Parar ciclo de linha.
-IHM -> ST: Se autorizado o processo inicia.
-ST --> IHM: Contagem de turnos em tempo real
-ST --> IHM: Status do sistema
+IHM -> Z: Avalia as permissões
+hnote over Z: Verifica os níveis de \n autorização do usuário.
+deactivate IHM
+Z -> ST: Se autorizado o processo inicia.
 '------------------------------------
 'IHM:
-hnote over IHM: Fluxo dos dados.
+hnote over IHM: Fluxo de dados em tempo real.
+activate IHM
+hnote over ST: Processamento das informações.
 ST --> IHM
 IHM -> ST
+IHM -> "OP": Visualização da contagem.
+hnote over IHM: Em menos de 2s a \n notificação sonora/visual \n ocorre através da IHM.
+IHM -> "OP": Visualização do status.
+deactivate IHM
 '------------------------------------
-
-hnote over ST: Processamento das informações.
-hnote over ST: Em menos de 2s a \n notificação sonora/visual \n ocorre através da IHM.
-IHM -> "OP": Visualização.
 hnote over Z: Se o usuário não estiver \n autorizado a operação falha.
 Z --> OP
 

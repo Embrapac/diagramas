@@ -3,7 +3,6 @@
 
 actor "Operador" as OP
 boundary "IHM"
-participant "FIltragem de permissões" as Z
 control Sistema as ST
 
 /'
@@ -17,21 +16,12 @@ segundos após a ocorrência.
 '                      Inicio
 '======================================================
 'Permissões:
-activate Z
 activate ST
 activate IHM
-hnote over Z: Verifica os níveis de \n autorização do usuário.
-OP -> IHM: Iniciar/Parar.
-IHM -> ST: Se autorizado o processo inicia.
-ST --> IHM
-IHM -> ST
-hnote over IHM: Fluxo dos dados.
-hnote over ST: Processamento das informações.
-hnote over ST: Em menos de 2s a \n notificação sonora/visual \n ocorre através da IHM.
+hnote over ST: Processamento \n das informações.
 IHM -> "OP": Visualização.
-hnote over Z: Se o usuário não estiver \n autorizado a operação falha.
-Z --> OP
-
+IHM -> ST
+ST --> IHM: Em menos de 2s a \n notificação sonora/visual \n ocorre através da IHM.
 '=====================================================
 'Notas:
 '=====================================================
@@ -45,7 +35,6 @@ footer
 
 **Casos de Uso cobertos**:
  - **MIO-002** Exibição de Alarmes;
- - **MIO-003** Autenticação de Usuários;
 end footer
 
 @enduml
