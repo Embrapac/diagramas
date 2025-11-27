@@ -47,3 +47,5 @@ Utilize este comando para apagar todos os vetores svg existentes na pasta diagra
 
 
 
+
+
