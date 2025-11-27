@@ -1,3 +1,6 @@
+### DS-DADOSKPI-001:
+![DS-DADOSKPI-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-DADOSKPI-001.svg)
+
 ### DS-EMERGENCIA-001:
 ![DS-EMERGENCIA-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-EMERGENCIA-001.svg)
 
@@ -12,6 +15,9 @@
 
 ### DS-MC-VIDEO-001:
 ![DS-MC-VIDEO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-MC-VIDEO-001.svg)
+
+### DS-MODELOML-001:
+![DS-MODELOML-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-MODELOML-001.svg)
 
 ### DS-MONITORAMENTO-001:
 ![DS-MONITORAMENTO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-MONITORAMENTO-001.svg)
