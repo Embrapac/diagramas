@@ -49,7 +49,6 @@ end legend
 
 footer
 
-
 **Casos de Uso cobertos**:
  - **MIO-004** Reconhecimento de Alarmes (Ack);
 end footer
