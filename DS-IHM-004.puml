@@ -1,0 +1,57 @@
+@startuml
+!include DEFS.puml
+
+actor "Operador" as OP
+boundary "IHM"
+control Sistema as ST
+
+/'
+O sistema DEVE permitir que um operador silencie o alarme sonoro na IHM. 
+Será considerado atendido quando: 
+(a) Um botão "Reconhecer Alarme" silenciar o som; 
+(b) O alarme visual permanecer ativo até resolução; 
+(c) O evento for registrado para auditoria.
+'/
+
+'======================================================
+'                      Inicio
+'======================================================
+'Permissões:
+activate ST
+activate IHM
+
+'Estado inicial: A falha já ocorreu
+hnote over ST: Estado de Falha: \n Sonoro ON / Visual ON.
+
+IHM --> "OP": Visualização.
+OP -> IHM: Selecionar "Reconhecer Alarme".
+IHM -> ST
+ST -> ST: Grava Auditoria (Registro c).
+
+
+hnote over ST: Lógica de Reconhecimento: \n 1. Desliga Som (Registro a); \n 2. Mantém Visual Ativo (Registro b).
+
+ST --> IHM: Atualiza IHM: \n Som mudo / Alerta visual mantido.
+
+... A falha persiste até ser resolvida fisicamente ...
+
+hnote over ST: Sensor indica normalização \n (Falha Resolvida).
+
+ST --> IHM: Remove Alerta Visual \n (Completa Registro b).
+
+'=====================================================
+'Notas:
+'=====================================================
+
+legend top
+**Diagrama de sequência - Módulo de Interface e Operação (MIO) - IHM Operacional**
+end legend
+
+footer
+
+
+**Casos de Uso cobertos**:
+ - **MIO-004** Reconhecimento de Alarmes (Ack);
+end footer
+
+@enduml
