@@ -1,10 +1,9 @@
 @startuml
 !include DEFS.puml
 
-actor "Operador"
+actor "Operador" as OP
 boundary "IHM"
-entity "Medição de grandezas" as MG
-participant "MCU"
+control Sistema as ST
 
 /'
 O sistema DEVE exibir alarmes de falha. Será considerado atendido
@@ -16,17 +15,13 @@ segundos após a ocorrência.
 '======================================================
 '                      Inicio
 '======================================================
-activate MCU
-MG -> MCU: Repasse dos dados
-MCU -> IHM: Exibição
-IHM -> "Operador": Visualização
-deactivate MCU
-
-hnote over MCU: Processamento das informações
-
-hnote over IHM: Em menos de 2s a notificação sonora/visual ocorre através da IHM
-
-
+'Permissões:
+activate ST
+activate IHM
+hnote over ST: Processamento \n das informações.
+IHM -> "OP": Visualização.
+IHM -> ST
+ST --> IHM: Em menos de 2s a \n notificação sonora/visual \n ocorre através da IHM.
 '=====================================================
 'Notas:
 '=====================================================
@@ -39,9 +34,7 @@ footer
 
 
 **Casos de Uso cobertos**:
- - **MIO-002** Exibição de Alarmes
+ - **MIO-002** Exibição de Alarmes;
 end footer
-
-
 
 @enduml

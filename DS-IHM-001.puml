@@ -1,42 +1,46 @@
 @startuml
 !include DEFS.puml
 
-actor Operador
-participant "Linha de produção" as A
-participant "Contagem em tempo real" as B
-participant "Status do sistema" as C
+actor "Operador" as OP
+boundary "IHM"
+participant "FIltragem de permissões" as Z
+control Sistema as ST
+
+/'
+O sistema DEVE possuir uma IHM local para operação. Será considerado
+atendido quando a IHM permitir a um operador autenticado:
+
+(a) Iniciar e parar o ciclo da linha; 
+(b) Visualizar a contagem do turno em tempo real; 
+(c) Visualizar o status do sistema (Operando, Parado, Falha).
+'/
 
 '======================================================
 '                      Inicio
 '======================================================
-
-'Comando de iniciar/parar:
-Operador -> A: Iniciar/Parar
-activate A
-'------------------------------------------------------
-
-'Solicitar Contagem
-Operador -> B: Solicitar
-activate B
-'------------------------------------------------------
-
-'Solicitar o Status 
-Operador-> C: Solicitar
-activate C
-'------------------------------------------------------
-
-C --> Operador: Mostrar Status
-deactivate C
-'------------------------------------------------------
-
-B --> Operador: Mostrar a contagem
-deactivate B
-'------------------------------------------------------
-
-A --> Operador: Operação finalizada
-deactivate A
-'------------------------------------------------------
-
+'Permissões:
+activate Z
+activate ST
+activate IHM
+OP -> IHM: Iniciar/Parar ciclo de linha.
+IHM -> Z: Avalia as permissões
+hnote over Z: Verifica os níveis de \n autorização do usuário.
+deactivate IHM
+Z -> ST: Se autorizado o processo inicia.
+'------------------------------------
+'IHM:
+hnote over IHM: Fluxo de dados em tempo real.
+activate IHM
+hnote over ST: Processamento das informações.
+ST --> IHM
+IHM -> ST
+IHM -> "OP": Visualização da contagem.
+hnote over IHM: Em menos de 2s a \n notificação sonora/visual \n ocorre através da IHM.
+IHM -> "OP": Visualização do status.
+deactivate IHM
+'------------------------------------
+hnote over Z: Se o usuário não estiver \n autorizado a operação falha.
+Z --> OP
 
 '=====================================================
 'Notas:
@@ -50,9 +54,8 @@ footer
 
 
 **Casos de Uso cobertos**:
- - **MIO-001** Interface de operação (IHM)
+ - **MIO-001** Interface de Operação (IHM);
+ - **MIO-003** Autenticação de Usuários;
 end footer
-
-
 
 @enduml
