@@ -1,9 +1,9 @@
 @startuml
 'Modo1:
-'!option handwritten true
+!option handwritten true
 
 'Modo2:
-skinparam Handwritten true
+'skinparam Handwritten true
 
 hide footbox 
 
