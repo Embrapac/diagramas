@@ -1,0 +1,54 @@
+@startuml
+!include DEFS.puml
+
+actor "Operador" as OP
+boundary "IHM"
+control Sistema as ST
+
+/'
+O sistema DEVE armazenar e exibir um histórico dos últimos 100 eventos
+de alarme na IHM. 
+
+Será considerado atendido quando a IHM apresentar uma tela de histórico
+contendo, no mínimo: carimbo de data/hora do evento, descrição do 
+alarme e seu status (Ativo, Reconhecido, Normalizado).
+'/
+
+'======================================================
+'                      Inicio
+'======================================================
+'Permissões:
+activate ST
+
+
+
+
+IHM -> ST: Solicita dados.
+activate IHM
+OP -> IHM: Navegação pelas telas \n de Histórico de Alarmes.
+activate IHM
+hnote over ST: Recuperação de Dados: \n 1. Consulta log de eventos; \n 2. Filtra os últimos 100 registros; \n 3. Ordena por Data/Hora (Decrescente).
+
+ST --> IHM: Retorna a lista estruturada: \n {Data/Hora, Descrição, Status}.
+
+deactivate IHM
+IHM -> OP: Exibe a tabela com as colunas: \n [Data/Hora] | [Descrição] | [Status].
+
+'=====================================================
+'Notas:
+'=====================================================
+
+legend top
+**Diagrama de sequência - Módulo de Interface e Operação (MIO) - IHM Operacional**
+end legend
+
+footer
+
+
+**Casos de Uso cobertos**:
+ - **MIO-005** Histórico de Alarmes Local.
+end footer
+
+
+
+@enduml
