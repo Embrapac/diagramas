@@ -26,6 +26,9 @@ Utilize este comando para apagar todos os vetores svg existentes na pasta diagra
 ### DS-IHM-002:
 ![DS-IHM-002](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-IHM-002.svg)
 
+### DS-IHM-004:
+![DS-IHM-004](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-IHM-004.svg)
+
 ### DS-IHM-005:
 ![DS-IHM-005](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-IHM-005.svg)
 
