@@ -23,7 +23,6 @@ activate IHM
 'Estado inicial: A falha já ocorreu
 hnote over ST: Estado de Falha: \n Sonoro ON / Visual ON.
 
-IHM --> "OP": Visualização
 OP -> IHM: Selecionar "Reconhecer Alarme".
 IHM -> ST
 ST -> ST: Grava Auditoria (Registro c).
@@ -31,8 +30,11 @@ ST -> ST: Grava Auditoria (Registro c).
 
 hnote over ST: Lógica de Reconhecimento: \n 1. Desliga Som (Registro a); \n 2. Mantém Visual Ativo (Registro b).
 
-ST --> IHM: Atualiza IHM: \n Som mudo / Alerta visual mantido.
 
+ST --> IHM: Atualiza IHM: \n Som mudo / Alerta visual mantido.
+activate IHM
+IHM --> "OP": Visualização do alarme final
+deactivate IHM
 ... A falha persiste até ser resolvida fisicamente ...
 
 hnote over ST: Sensor indica normalização \n (Falha Resolvida).
