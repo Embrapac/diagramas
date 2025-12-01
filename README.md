@@ -10,7 +10,6 @@ Utilize este comando para apagar todos os vetores svg existentes na pasta diagra
 
 ### Informações geradas via script:
 ## Diagramas de sequência:
-
 <!--INICIO_DA_AUTOMAÇÃO -->
 ### DS-DADOSKPI-001:
 ![DS-DADOSKPI-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-DADOSKPI-001.svg)
@@ -27,8 +26,8 @@ Utilize este comando para apagar todos os vetores svg existentes na pasta diagra
 ### DS-IHM-002:
 ![DS-IHM-002](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-IHM-002.svg)
 
-### DS-IHM-004:
-![DS-IHM-004](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-IHM-004.svg)
+### DS-IHM-005:
+![DS-IHM-005](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-IHM-005.svg)
 
 ### DS-MC-VIDEO-001:
 ![DS-MC-VIDEO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-MC-VIDEO-001.svg)
@@ -46,15 +45,3 @@ Utilize este comando para apagar todos os vetores svg existentes na pasta diagra
 ![DS-RELATORIO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-RELATORIO-001.svg)
 
 <!-- FIM_DA_AUTOMAÇÃO -->
-
-
-
-
-
-
-
-
-
-
-
-
