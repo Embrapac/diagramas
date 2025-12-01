@@ -4,7 +4,7 @@ set -euo pipefail
 
 AUTOMATION_FILE="script_readme/FILES_AUTOMATION.txt"
 README="README.md"
-HEADER="## Diagramas de sequência:"
+HEADER="# 1. Diagramas de sequência:"
 
 if [[ ! -f "$AUTOMATION_FILE" ]]; then
     echo "[ERRO] Arquivo $AUTOMATION_FILE não encontrado."
@@ -26,7 +26,7 @@ sed -i '/<!--INICIO_DA_AUTOMAÇÃO -->/,/<!-- FIM_DA_AUTOMAÇÃO -->/d' "$README
     echo "<!-- FIM_DA_AUTOMAÇÃO -->"
 } > .tmp_automation_block
 
-# Insere após "## Diagramas de sequência:"
+# Insere após "# 1. Diagramas de sequência:"
 awk -v header="$HEADER" -v insert=".tmp_automation_block" '
 {
     print $0

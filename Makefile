@@ -76,11 +76,19 @@ endif
 		echo "[PUML_WORKBENCH] Aviso: script_readme/ADD_IMAGE.sh não encontrado — pulando atualização do README.md."; \
 	fi
 
+	# Exportar esquemático KiCad
+	echo "[KICAD_EXPORT] Iniciando exportação do KiCad..."
+	cd esquematicos/embrapac-mcu
+	kicad-cli sch export svg --output ../../ embrapac-mcu.kicad_sch && mv ../../embrapac-mcu.svg ../../MCU-SCHEMATIC.svg
+	cd ../..
+	mv MCU-SCHEMATIC.svg diagramas_svg/
+
 	clear
 	@echo "   _____________________________________________________ "
 	@echo "  /                                                     \\"
 	@echo " |  >>> Pasta diagramas_svg atualizada com sucesso !     |"
 	@echo " |  >>> O README já foi atualizado com as novas imagens! |"
+	@echo " |  >>> KiCad SVG exportado com sucesso!                 |"
 	@echo "  \___________      ____________________________________/"
 	@echo "              \\   /"
 	@echo "               \\ /"
