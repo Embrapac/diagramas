@@ -79,7 +79,7 @@ endif
 	# Exportar esquemático KiCad
 	echo "[KICAD_EXPORT] Iniciando exportação do KiCad..."
 	cd esquematicos/embrapac-mcu
-	kicad-cli sch export svg --output ../../ embrapac-mcu.kicad_sch && mv ../../embrapac-mcu.svg ../../MCU-SCHEMATIC.svg
+	kicad-cli sch export svg --exclude-drawing-sheet --output ../../ embrapac-mcu.kicad_sch && mv ../../embrapac-mcu.svg ../../MCU-SCHEMATIC.svg
 	cd ../..
 	mv MCU-SCHEMATIC.svg diagramas_svg/
 
