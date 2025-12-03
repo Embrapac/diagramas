@@ -1,0 +1,57 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "Profissionais" as workers {
+  * id : INT <<PK>>
+  --
+  login : VARCHAR(20)
+  password: VARCHAR(100)
+  name : VARCHAR(50)
+  role : VARCHAR(30)
+}
+
+entity "Turno" as shifts {
+  * id : INT <<PK>>
+  --
+  start_time : DATETIME
+  end_time : DATETIME
+  total_amount : DECIMAL(10,2)
+  product_s_count : INT
+  product_m_count : INT
+  product_l_count : INT
+  stop_count : INT
+  worker_id : INT <<FK>>
+  event_id : INT <<FK>>
+}
+
+entity "Produtos" as products {
+  * id : INT <<PK>>
+  --
+  name : VARCHAR(100)
+  size : VARCHAR(1) ['S', 'M', 'L']
+}
+
+entity "Alarmes/Eventos" as events {
+  * id : INT <<PK>>
+  --
+  occurrence_time : DATETIME
+  description : VARCHAR(255)
+  code: INT
+  message : VARCHAR(255)
+  severity : VARCHAR(20) ['LOW', 'MEDIUM', 'HIGH']
+  status : VARCHAR(20) ['ACTIVE', 'ACKNOLEDGED', 'RESOLVED']
+}
+
+entity "Esteira" as conveyor_belts {
+  * id : INT <<PK>>
+  --
+  status : VARCHAR(20) ['IN_PROGRESS', 'ON_HOLD', 'ON_FAILURE']
+}
+
+shifts "1" -- "0..*" workers : contém
+shifts "1" -- "0..*" events : contém
+shifts "1" -- "1" conveyor_belts : utiliza
+'products "1" -- "0..*" order_items : included_in
+
+@enduml
