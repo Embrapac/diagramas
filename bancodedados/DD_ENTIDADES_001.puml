@@ -11,6 +11,13 @@ entity "Profissionais" as workers {
   role : VARCHAR(30)
 }
 
+entity "Turno_Profissionais" as shift_workers {
+  * turno_id : INT <<PK,FK>>
+  * profissional_id : INT <<PK,FK>>
+  --
+  funcao_no_turno : VARCHAR(50)
+}
+
 entity "Turno" as shifts {
   * id : INT <<PK>>
   --
@@ -21,15 +28,12 @@ entity "Turno" as shifts {
   product_m_count : INT
   product_l_count : INT
   stop_count : INT
-  worker_id : INT <<FK>>
-  event_id : INT <<FK>>
+  c_belt: INT <<FK>>
 }
 
-entity "Produtos" as products {
-  * id : INT <<PK>>
-  --
-  name : VARCHAR(100)
-  size : VARCHAR(1) ['S', 'M', 'L']
+entity "Turno_Eventos" as shift_events {
+  * turno_id : INT <<PK,FK>>
+  * evento_id : INT <<PK,FK>>
 }
 
 entity "Alarmes/Eventos" as events {
@@ -49,9 +53,11 @@ entity "Esteira" as conveyor_belts {
   status : VARCHAR(20) ['IN_PROGRESS', 'ON_HOLD', 'ON_FAILURE']
 }
 
-shifts "1" -- "0..*" workers : contém
-shifts "1" -- "0..*" events : contém
+
+shifts "1" -- "0..*" shift_workers
+workers "1" -- "0..*" shift_workers
+shifts "1" -- "0..*" shift_events
+events "1" -- "0..*" shift_events
 shifts "1" -- "1" conveyor_belts : utiliza
-'products "1" -- "0..*" order_items : included_in
 
 @enduml
