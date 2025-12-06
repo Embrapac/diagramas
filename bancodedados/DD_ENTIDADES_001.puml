@@ -1,0 +1,63 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "Profissionais" as workers {
+  * id : INT <<PK>>
+  --
+  login : VARCHAR(20)
+  password: VARCHAR(100)
+  name : VARCHAR(50)
+  role : VARCHAR(30)
+}
+
+entity "Turno_Profissionais" as shift_workers {
+  * turno_id : INT <<PK,FK>>
+  * profissional_id : INT <<PK,FK>>
+  --
+  funcao_no_turno : VARCHAR(50)
+}
+
+entity "Turno" as shifts {
+  * id : INT <<PK>>
+  --
+  start_time : DATETIME
+  end_time : DATETIME
+  total_amount : DECIMAL(10,2)
+  product_s_count : INT
+  product_m_count : INT
+  product_l_count : INT
+  stop_count : INT
+  c_belt: INT <<FK>>
+}
+
+entity "Turno_Eventos" as shift_events {
+  * turno_id : INT <<PK,FK>>
+  * evento_id : INT <<PK,FK>>
+}
+
+entity "Alarmes/Eventos" as events {
+  * id : INT <<PK>>
+  --
+  occurrence_time : DATETIME
+  description : VARCHAR(255)
+  code: INT
+  message : VARCHAR(255)
+  severity : VARCHAR(20) ['LOW', 'MEDIUM', 'HIGH']
+  status : VARCHAR(20) ['ACTIVE', 'ACKNOLEDGED', 'RESOLVED']
+}
+
+entity "Esteira" as conveyor_belts {
+  * id : INT <<PK>>
+  --
+  status : VARCHAR(20) ['IN_PROGRESS', 'ON_HOLD', 'ON_FAILURE']
+}
+
+
+shifts "1" -- "0..*" shift_workers
+workers "1" -- "0..*" shift_workers
+shifts "1" -- "0..*" shift_events
+events "1" -- "0..*" shift_events
+shifts "1" -- "1" conveyor_belts : utiliza
+
+@enduml
