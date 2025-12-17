@@ -1,0 +1,110 @@
+@startuml
+!define RECTANGLE class
+
+skinparam packageStyle rectangle
+skinparam backgroundColor white
+skinparam component {
+    BackgroundColor lightblue
+    BorderColor black
+}
+
+' ========== APLICAÇÃO WEB ==========
+package "IHM" {
+    component [Frontend\n<< >>] as Frontend
+    component [Backend\nAPI REST\n<< >>] as Backend
+    database "Banco de Dados\n<<MariaDB>>" as DB
+    component [PubSub Client\n<<Mosquitto>>] as MQTTclient
+    
+    Frontend -down-> Backend : HTTP/HTTPS
+    Backend -down-> DB : SQL
+    Backend -left-> MQTTclient : Pub/Sub
+}
+
+' ========== NUVEM ==========
+cloud "Nuvem" {
+    package "Cloud Services\n<<AWS/Azure/GCP/On Premise>>" as Cloud {
+        component [API Gateway] as APIGW
+        component [PubSubServer\n<<SQS / Pub/Sub / Mosquitto>>] as MQTTserver
+    }
+    database [Cloud Storage] as CloudDB
+    
+    Cloud -down-> CloudDB
+}
+
+' ========== MÓDULO EDGE ==========
+node "Módulo Edge" as EdgeNode {
+    
+    package "Interfaces de Comunicação" as EdgeIfcComm {
+        component [Edge Gateway] as EdgeGateway
+        component [PubSub Client/Server] as EdgeMQTT
+        component [I2C/SPI/UART] as EdgeComm
+    }
+    component [Processamento ML\n<<Processamento de Imagens\nOpenCV/TensorFlow>>] as EdgeProcess
+    component [Cache Local] as EdgeCache
+    
+    EdgeGateway <-down-> EdgeProcess
+    EdgeProcess <-down-> EdgeCache
+    EdgeMQTT <-down-> EdgeProcess
+
+    package "Drivers de Integração" as Drivers {
+        component [Driver RTSP] as DriverRTSP
+        component [Driver ONVIF] as DriverONVIF
+        component [Driver V4L2] as DriverV4L2
+        component [CSI RPi5] as DriverCSI
+    }    
+}
+
+node "Módulo NBIot" as NBIoTNode {
+    component [Módulo NB-IoT\n<<Quectel BC66>>] as NBIoTModule
+    component [Interfaces de Comunicação\n<<UART/USB>>] as NBIoTComm
+}
+
+' ========== MÓDULO MCU ==========
+node "Módulo MCU" {
+    component [PIC32MK] as MCU
+    component [Interfaces de Comunicação\n<<I2C/SPI/UART>>] as MCUComm
+}
+
+' ========== SENSORES E ATUADORES ==========
+package "Sensores" {
+    component [Sensor Óptico] as SensorOpt
+    component [Vibração] as SensorMov
+}
+
+package "Atuadores" {
+    component [Relés] as ActRelay
+    component [Pneumáticos] as Pneum
+}
+
+' ========== CÂMERAS ==========
+package "Câmeras" {
+    component [Câmera Foto] as Cam1
+    component [Câmera Vídeo] as Cam2
+}
+
+' ========== CONEXÕES MCU <-> SENSORES/ATUADORES ==========
+SensorOpt -down-> MCU : GPIO/I2C/SPI
+SensorMov -down-> MCU : GPIO/I2C/SPI
+MCU -down-> ActRelay : GPIO
+MCU -down-> Pneum : PWM/GPIO
+
+' ========== CONEXÕES MCU <-> EDGE ==========
+MCU -right-> MCUComm
+MCUComm -right-> EdgeComm : I2C/UART/SPI
+
+' ========== CONEXÕES CÂMERAS <-> EDGE ==========
+Cam1 -down-> Drivers
+Cam2 -down-> Drivers
+
+Drivers -right-> EdgeProcess : Stream
+
+' ========== CONEXÕES EDGE <-> NUVEM ==========
+EdgeGateway -up-> Cloud : HTTPS
+EdgeMQTT -up-> MQTTserver : MQTT Bridge
+EdgeIfcComm -up-> NBIoTNode : UART/USB
+
+' ========== CONEXÕES APLICAÇÃO WEB <-> NUVEM ==========
+Backend -up-> APIGW : API REST
+MQTTclient -up-> MQTTserver : MQTT Bridge
+
+@enduml
