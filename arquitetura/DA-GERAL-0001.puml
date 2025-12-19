@@ -10,14 +10,14 @@ skinparam component {
 
 ' ========== APLICAÇÃO WEB ==========
 package "IHM" {
-    component [Frontend\n<< >>] as Frontend
-    component [Backend\nAPI REST\n<< >>] as Backend
+    component [Frontend\n<< HTML/CSS/JS >>] as Frontend
+    component [Backend\nAPI REST\n<< ? >>] as Backend
     database "Banco de Dados\n<<MariaDB>>" as DB
-    component [PubSub Client\n<<Mosquitto>>] as MQTTclient
+    component [PubSub Client/Server\n<<Mosquitto>>] as MQTTclient
     
-    Frontend -down-> Backend : HTTP/HTTPS
+    Frontend <-down-> Backend : HTTP/HTTPS
     Backend -down-> DB : SQL
-    Backend -left-> MQTTclient : Pub/Sub
+    Backend <-left-> MQTTclient : Pub/Sub
 }
 
 ' ========== NUVEM ==========
@@ -26,9 +26,11 @@ cloud "Nuvem" {
         component [API Gateway] as APIGW
         component [PubSubServer\n<<SQS / Pub/Sub / Mosquitto>>] as MQTTserver
     }
-    database [Cloud Storage] as CloudDB
+    database "Cloud Storage" as CloudDB    
+    component "<&monitor> Monitoramento\nGrafana" as Monitoring
     
     Cloud -down-> CloudDB
+    Monitoring <-right- CloudDB
 }
 
 ' ========== MÓDULO EDGE ==========
@@ -41,17 +43,20 @@ node "Módulo Edge" as EdgeNode {
     }
     component [Processamento ML\n<<Processamento de Imagens\nOpenCV/TensorFlow>>] as EdgeProcess
     component [Cache Local] as EdgeCache
+    component [Processamento de Eventos MCU] as EdgeMCUProc
     
     EdgeGateway <-down-> EdgeProcess
     EdgeProcess <-down-> EdgeCache
     EdgeMQTT <-down-> EdgeProcess
+    EdgeComm -down-> EdgeMCUProc
+    EdgeMCUProc -up-> EdgeMQTT
 
     package "Drivers de Integração" as Drivers {
         component [Driver RTSP] as DriverRTSP
         component [Driver ONVIF] as DriverONVIF
         component [Driver V4L2] as DriverV4L2
         component [CSI RPi5] as DriverCSI
-    }    
+    }
 }
 
 node "Módulo NBIot" as NBIoTNode {
@@ -74,6 +79,9 @@ package "Sensores" {
 package "Atuadores" {
     component [Relés] as ActRelay
     component [Pneumáticos] as Pneum
+    component [Botão de Alarme] as AlarmBtn
+    component [LEDs Indicadores] as AlarmLED
+    component [Buzzer] as AlarmBuzzer
 }
 
 ' ========== CÂMERAS ==========
@@ -87,6 +95,9 @@ SensorOpt -down-> MCU : GPIO/I2C/SPI
 SensorMov -down-> MCU : GPIO/I2C/SPI
 MCU -down-> ActRelay : GPIO
 MCU -down-> Pneum : PWM/GPIO
+MCU -down-> AlarmBtn : GPIO
+MCU -down-> AlarmLED : GPIO
+MCU -down-> AlarmBuzzer : GPIO/PWM
 
 ' ========== CONEXÕES MCU <-> EDGE ==========
 MCU -right-> MCUComm
@@ -105,6 +116,6 @@ EdgeIfcComm -up-> NBIoTNode : UART/USB
 
 ' ========== CONEXÕES APLICAÇÃO WEB <-> NUVEM ==========
 Backend -up-> APIGW : API REST
-MQTTclient -up-> MQTTserver : MQTT Bridge
+MQTTclient <-up-> MQTTserver : MQTT Bridge
 
 @enduml
