@@ -25,6 +25,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
 # 1. Diagramas de sequência:
 <!--INICIO_DA_AUTOMAÇÃO -->
+### DA-GERAL-0001:
+![DA-GERAL-0001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DA-GERAL-0001.svg)
+
 ### DD_ENTIDADES_001:
 ![DD_ENTIDADES_001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DD_ENTIDADES_001.svg)
 
@@ -63,6 +66,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
 ### DS-RELATORIO-001:
 ![DS-RELATORIO-001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DS-RELATORIO-001.svg)
+
+### MCU-SCHEMATIC:
+![MCU-SCHEMATIC](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/MCU-SCHEMATIC.svg)
 
 <!-- FIM_DA_AUTOMAÇÃO -->
 
