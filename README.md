@@ -19,7 +19,6 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
     </tr>
   </thead>
   <tbody>
-
     <tr>
       <td>MC-001 <br> MC-002 <br> MC-005</td>
       <td>
@@ -29,7 +28,6 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
         </a>
       </td>
     </tr>
-
     <tr>
       <td>MC-003</td>
       <td>
