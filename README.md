@@ -16,11 +16,17 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
 ## 📑 Índice do projeto:
 
+<!-- ALTERE ESTA LINHA PARA MUDAR O ESTILO DOS TÍTULOS EM TODA A TABELA -->
+<!-- STYLE_TITULO_SECAO = "background:#ffffff; color:#000000; border-bottom:2px solid #ccc;" -->
+
 <table style="width:100%; border-collapse:collapse;">
 
   <!-- Seção MC -->
   <tr>
-    <th colspan="2" style="text-align:center; font-size:1.2em;">MC</th>
+    <th colspan="2"
+        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc;">
+      MC
+    </th>
   </tr>
 
   <tr>
@@ -28,71 +34,80 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
     <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
-  <!-- MC-001 / MC-002 / MC-005 -->
   <tr>
     <td>
       <b>MC-001</b><br>
       <b>MC-002</b><br>
       <b>MC-005</b>
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-principal-001">DS-PRINCIPAL-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-principal-001">DS-PRINCIPAL-001</a>
+    </td>
   </tr>
 
-  <!-- MC-003 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MC-003</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-emergencia-001">DS-EMERGENCIA-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-emergencia-001">DS-EMERGENCIA-001</a>
+    </td>
   </tr>
 
-  <!-- MC-004 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MC-004</b><br>
       &nbsp;
     </td>
-    <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
+    <td style="text-align:left;">
+      Este item não foi abordado em nenhum diagrama em específico.
+    </td>
   </tr>
 
-  <!-- MC-006 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MC-006</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-foto-001">DS-FOTO-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-foto-001">DS-FOTO-001</a>
+    </td>
   </tr>
 
-  <!-- MC-007 / EDG-005 -->
   <tr>
     <td>
       <b><br>MC-007</b><br>
       <b>EDG-005</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-mc-video-001">DS-MC-VIDEO-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-mc-video-001">DS-MC-VIDEO-001</a>
+    </td>
   </tr>
 
-  <!-- MC-008 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MC-008</b><br>
       &nbsp;
     </td>
-    <td>Este requisito não será implementado por diagrama pois o mesmo já está contido em todos os diagramas de EDGE.</td>
+    <td style="text-align:left;">
+      Este requisito já está contido nos diagramas de EDGE.
+    </td>
   </tr>
 
 
 
   <!-- Seção MIO -->
   <tr>
-    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">MIO</th>
+    <th colspan="2"
+        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
+      MIO
+    </th>
   </tr>
 
   <tr>
@@ -100,51 +115,58 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
     <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
-  <!-- MIO-001 / MIO-003 -->
   <tr>
     <td>
       <b><br>MIO-001</b><br>
       <b>MIO-003</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-ihm-001">DS-IHM-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-ihm-001">DS-IHM-001</a>
+    </td>
   </tr>
 
-  <!-- MIO-002 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MIO-002</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-ihm-002">DS-IHM-002</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-ihm-002">DS-IHM-002</a>
+    </td>
   </tr>
 
-  <!-- MIO-004 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MIO-004</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-ihm-004">DS-IHM-004</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-ihm-004">DS-IHM-004</a>
+    </td>
   </tr>
 
-  <!-- MIO-005 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MIO-005</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-ihm-005">DS-IHM-005</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-ihm-005">DS-IHM-005</a>
+    </td>
   </tr>
 
 
 
   <!-- Seção MDC -->
   <tr>
-    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">MDC</th>
+    <th colspan="2"
+        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
+      MDC
+    </th>
   </tr>
 
   <tr>
@@ -152,41 +174,47 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
     <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
-  <!-- MDC-001 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MDC-001</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-relatorio-001">DS-RELATORIO-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-relatorio-001">DS-RELATORIO-001</a>
+    </td>
   </tr>
 
-  <!-- MDC-002 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>MDC-002</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-monitoramento-001">DS-MONITORAMENTO-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-monitoramento-001">DS-MONITORAMENTO-001</a>
+    </td>
   </tr>
 
-  <!-- MDC-003 / MDC-004 -->
   <tr>
     <td>
       <b><br>MDC-003</b><br>
       <b>MDC-004</b><br>
       &nbsp;
     </td>
-    <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
+    <td style="text-align:left;">
+      Este item não foi abordado em nenhum diagrama em específico.
+    </td>
   </tr>
 
 
 
   <!-- Seção EDG -->
   <tr>
-    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">EDG</th>
+    <th colspan="2"
+        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
+      EDG
+    </th>
   </tr>
 
   <tr>
@@ -194,51 +222,58 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
     <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
-  <!-- EDG-001 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>EDG-001</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-dadoskpi-001">DS-DADOSKPI-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-dadoskpi-001">DS-DADOSKPI-001</a>
+    </td>
   </tr>
 
-  <!-- EDG-002 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>EDG-002</b><br>
       &nbsp;
     </td>
-    <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
+    <td style="text-align:left;">
+      Este item não foi abordado em nenhum diagrama em específico.
+    </td>
   </tr>
 
-  <!-- EDG-003 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>EDG-003</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-modeloml-001">DS-MODELOML-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-modeloml-001">DS-MODELOML-001</a>
+    </td>
   </tr>
 
-  <!-- EDG-004 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>EDG-004</b><br>
       &nbsp;
     </td>
-    <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
+    <td style="text-align:left;">
+      Este item não foi abordado em nenhum diagrama em específico.
+    </td>
   </tr>
 
 
 
   <!-- Seção CLD -->
   <tr>
-    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">CLD</th>
+    <th colspan="2"
+        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
+      CLD
+    </th>
   </tr>
 
   <tr>
@@ -246,37 +281,43 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
     <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
-  <!-- CLD-001 / CLD-002 -->
   <tr>
     <td>
       <b><br>CLD-001</b><br>
       <b>CLD-002</b><br>
       &nbsp;
     </td>
-    <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
+    <td style="text-align:left;">
+      Este item não foi abordado em nenhum diagrama em específico.
+    </td>
   </tr>
 
-  <!-- CLD-003 -->
   <tr>
     <td>
       &nbsp;<br>
       <b>CLD-003</b><br>
       &nbsp;
     </td>
-    <td>Contido(s) no arquivo <a href="#ds-dadoskpi-001">DS-DADOSKPI-001</a></td>
+    <td style="text-align:left;">
+      Contido(s) no arquivo <a href="#ds-dadoskpi-001">DS-DADOSKPI-001</a>
+    </td>
   </tr>
 
-  <!-- CLD-004 / CLD-005 -->
   <tr>
     <td>
       <b><br>CLD-004</b><br>
       <b>CLD-005</b><br>
       &nbsp;
     </td>
-    <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
+    <td style="text-align:left;">
+      Este item não foi abordado em nenhum diagrama em específico.
+    </td>
   </tr>
 
 </table>
+
+
+
 
 
 ---
