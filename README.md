@@ -20,6 +20,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </thead>
   <tbody>
     <tr>
+      <!-- Linha 1 -->
       <td>MC-001 <br> MC-002 <br> MC-005</td>
       <td>
         Contido(s) no arquivo
@@ -29,6 +30,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
       </td>
     </tr>
     <tr>
+      <!-- Linha 2 -->
       <td>MC-003</td>
       <td>
         Contido no arquivo
@@ -37,7 +39,13 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
         </a>
       </td>
     </tr>
-
+      <!-- Linha 3 -->
+      <td>MC-004</td>
+      <td>
+      Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.
+        </a>
+      </td>
+    </tr>
   </tbody>
 </table>
 
