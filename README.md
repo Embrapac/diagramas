@@ -71,7 +71,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MC-007 / EDG-005 -->
   <tr>
     <td>
-      <b>MC-007</b><br>
+      <b><br>MC-007</b><br>
       <b>EDG-005</b><br>
       &nbsp;
     </td>
@@ -103,7 +103,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MIO-001 / MIO-003 -->
   <tr>
     <td>
-      <b>MIO-001</b><br>
+      <b><br>MIO-001</b><br>
       <b>MIO-003</b><br>
       &nbsp;
     </td>
@@ -175,7 +175,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MDC-003 / MDC-004 -->
   <tr>
     <td>
-      <b>MDC-003</b><br>
+      <b><br>MDC-003</b><br>
       <b>MDC-004</b><br>
       &nbsp;
     </td>
@@ -249,7 +249,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- CLD-001 / CLD-002 -->
   <tr>
     <td>
-      <b>CLD-001</b><br>
+      <b><br>CLD-001</b><br>
       <b>CLD-002</b><br>
       &nbsp;
     </td>
@@ -269,7 +269,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- CLD-004 / CLD-005 -->
   <tr>
     <td>
-      <b>CLD-004</b><br>
+      <b><br>CLD-004</b><br>
       <b>CLD-005</b><br>
       &nbsp;
     </td>
@@ -277,8 +277,6 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </tr>
 
 </table>
-
-
 
 
 ---
