@@ -1,29 +1,34 @@
-# 📊 Repositório para agrupamento dos diagramas do projeto da Embrapac
+# 📊 Repositório para agrupamento dos diagramas do projeto da Embrapac:
 Parte integrante do fluxo de trabalho do projeto final da residência do CPQD.
 
 ---
 
-## 🛠 Instruções de uso do Makefile
+## 🛠 Instruções de uso do Makefile:
 
 Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg respectivos e salva-los na sub-pasta diagramas_svg.
 
-| Comando | Descrição |
-| :--- | :--- |
-| **`make`** | Compila todos os arquivos `.puml` e gera os vetores `.svg` na pasta `diagramas_svg`. |
-| **`make clean`** | Apaga todos os vetores `.svg` existentes na pasta `diagramas_svg`. |
+## 📑 Índice do projeto:
+
+## Módulo de controle (MC):
+
+<table>
+  <thead>
+    <tr>
+      <th>Variável</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MC-001 <br> MC-002 <br> MC-005</td>
+      <td>Contido(s) no arquivo [`DS-PRINCIPAL-001`](#ds-principal-001) </td>
+    <tr>
+  </tbody>
+</table>
 
 ---
 
-## 📑 Índice de secções de ilustrações do projeto
-
-1. [Diagramas de Sequência](#1-diagramas-de-sequência)
-   * *Uma representação simplificada com os os diagramas de sequência de cada requisito.*
-2. [Diagrama esquemático com as conexões do projeto](#2-diagrama-esquemático-com-as-conexões-do-projeto)
-   * *Uma representação de uma diagrama esquemático das conexôes eletrônicas do sistema embarcado do projeto.*
-
----
-
-# 1. Diagramas de sequência:
+# Diagramas:
 <!--INICIO_DA_AUTOMAÇÃO -->
 ### DA-GERAL-0001:
 ![DA-GERAL-0001](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/DA-GERAL-0001.svg)
@@ -71,9 +76,3 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 ![MCU-SCHEMATIC](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/MCU-SCHEMATIC.svg)
 
 <!-- FIM_DA_AUTOMAÇÃO -->
-
----
-
-# 2. Diagrama esquemático com as conexões do projeto:
-### MCU-SCHEMATIC:
-![MCU-SCHEMATIC](https://github.com/Embrapac/diagramas/blob/main/diagramas_svg/MCU-SCHEMATIC.svg)
