@@ -20,12 +20,12 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
 | **Itens** | **Desenvoltura** |
 | :--- | :--- |
-| **MC-001 // MC-002 // MC-005** | Contido(s) no arquivo [`DS-PRINCIPAL-001`](#ds-principal-001) |
-| **MC-003** | Contido(s) no arquivo [`DS-EMERGENCIA-001`](#ds-emergencia-001) |
-| **MC-004** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
-| **MC-006** | Contido(s) no arquivo [`DS-FOTO-001`](#ds-foto-001) |
-| **MC-007 // EDG-005** | Contido(s) no arquivo [`DS-MC-VIDEO-001`](#ds-mc-video-001) |
-| **MC-008** | Este requisito não será implementado por diagrama pois o mesmo já está contido em todos os diagramas de EDGE. |
+| **MC—001 // MC—002 // MC—005** | Contido(s) no arquivo [`DS-PRINCIPAL-001`](#ds-principal-001) |
+| **MC—003** | Contido(s) no arquivo [`DS-EMERGENCIA-001`](#ds-emergencia-001) |
+| **MC—004** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
+| **MC—006** | Contido(s) no arquivo [`DS-FOTO-001`](#ds-foto-001) |
+| **MC—007 // EDG—005** | Contido(s) no arquivo [`DS-MC-VIDEO-001`](#ds-mc-video-001) |
+| **MC—008** | Este requisito não será implementado por diagrama pois o mesmo já está contido em todos os diagramas de EDGE. |
 
 ## Módulo de Interface e Operação (MIO):
 
@@ -49,17 +49,17 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 | **Itens** | **Desenvoltura** |
 | :--- | :--- |
 | **EDG-001** | Contido(s) no arquivo [`DS-DADOSKPI-001`](#ds-dadoskpi-001) |
-| **EDG~002** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
-| **EDG~003** | Contido(s) no arquivo [`DS-MODELOML-001`](#ds-modeloml-001) |
-| **EDG~004** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
+| **EDG—002** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
+| **EDG—003** | Contido(s) no arquivo [`DS-MODELOML-001`](#ds-modeloml-001) |
+| **EDG—004** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
 
 ## Módulo de Cloud (CLD):
 
 | **Itens** | **Desenvoltura** |
 | :--- | :--- |
-| **CLD~001 // CLD002** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
+| **CLD—001 // CLD002** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
 | **CLD-003** | Contido(s) no arquivo [`DS-DADOSKPI-001`](#ds-dadoskpi-001) |
-| **CLD~004 // CLD~-005** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
+| **CLD—004 // CLD—005** | Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo. |
 
 ---
 
