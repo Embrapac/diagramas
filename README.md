@@ -24,16 +24,16 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </tr>
 
   <tr>
-    <th style="width:15%;">Item do RFP</th>
-    <th style="width:85%;">Desenvoltura</th>
+    <th style="width:15%; text-align:left;">Item do RFP</th>
+    <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
-  <!-- MC-001/002/005 -->
+  <!-- MC-001 / MC-002 / MC-005 -->
   <tr>
     <td>
-      <div><b>MC-001</b></div>
-      <div><b>MC-002</b></div>
-      <div><b>MC-005</b></div>
+      <b>MC-001</b><br>
+      <b>MC-002</b><br>
+      <b>MC-005</b>
     </td>
     <td>Contido(s) no arquivo <a href="#ds-principal-001">DS-PRINCIPAL-001</a></td>
   </tr>
@@ -41,9 +41,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MC-003 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MC-003</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MC-003</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-emergencia-001">DS-EMERGENCIA-001</a></td>
   </tr>
@@ -51,9 +51,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MC-004 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MC-004</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MC-004</b><br>
+      &nbsp;
     </td>
     <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
   </tr>
@@ -61,9 +61,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MC-006 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MC-006</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MC-006</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-foto-001">DS-FOTO-001</a></td>
   </tr>
@@ -71,9 +71,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MC-007 / EDG-005 -->
   <tr>
     <td>
-      <div><b>MC-007</b></div>
-      <div><b>EDG-005</b></div>
-      <div style="height:0.9em;"></div>
+      <b>MC-007</b><br>
+      <b>EDG-005</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-mc-video-001">DS-MC-VIDEO-001</a></td>
   </tr>
@@ -81,9 +81,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MC-008 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MC-008</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MC-008</b><br>
+      &nbsp;
     </td>
     <td>Este requisito não será implementado por diagrama pois o mesmo já está contido em todos os diagramas de EDGE.</td>
   </tr>
@@ -96,16 +96,16 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </tr>
 
   <tr>
-    <th style="width:15%;">Item do RFP</th>
-    <th style="width:85%;">Desenvoltura</th>
+    <th style="width:15%; text-align:left;">Item do RFP</th>
+    <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
   <!-- MIO-001 / MIO-003 -->
   <tr>
     <td>
-      <div><b>MIO-001</b></div>
-      <div><b>MIO-003</b></div>
-      <div style="height:0.9em;"></div>
+      <b>MIO-001</b><br>
+      <b>MIO-003</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-ihm-001">DS-IHM-001</a></td>
   </tr>
@@ -113,9 +113,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MIO-002 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MIO-002</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MIO-002</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-ihm-002">DS-IHM-002</a></td>
   </tr>
@@ -123,9 +123,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MIO-004 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MIO-004</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MIO-004</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-ihm-004">DS-IHM-004</a></td>
   </tr>
@@ -133,9 +133,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MIO-005 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MIO-005</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MIO-005</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-ihm-005">DS-IHM-005</a></td>
   </tr>
@@ -148,16 +148,16 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </tr>
 
   <tr>
-    <th style="width:15%;">Item do RFP</th>
-    <th style="width:85%;">Desenvoltura</th>
+    <th style="width:15%; text-align:left;">Item do RFP</th>
+    <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
   <!-- MDC-001 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MDC-001</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MDC-001</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-relatorio-001">DS-RELATORIO-001</a></td>
   </tr>
@@ -165,9 +165,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MDC-002 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>MDC-002</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>MDC-002</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-monitoramento-001">DS-MONITORAMENTO-001</a></td>
   </tr>
@@ -175,9 +175,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- MDC-003 / MDC-004 -->
   <tr>
     <td>
-      <div><b>MDC-003</b></div>
-      <div><b>MDC-004</b></div>
-      <div style="height:0.9em;"></div>
+      <b>MDC-003</b><br>
+      <b>MDC-004</b><br>
+      &nbsp;
     </td>
     <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
   </tr>
@@ -190,16 +190,16 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </tr>
 
   <tr>
-    <th style="width:15%;">Item do RFP</th>
-    <th style="width:85%;">Desenvoltura</th>
+    <th style="width:15%; text-align:left;">Item do RFP</th>
+    <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
   <!-- EDG-001 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>EDG-001</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>EDG-001</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-dadoskpi-001">DS-DADOSKPI-001</a></td>
   </tr>
@@ -207,9 +207,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- EDG-002 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>EDG-002</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>EDG-002</b><br>
+      &nbsp;
     </td>
     <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
   </tr>
@@ -217,9 +217,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- EDG-003 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>EDG-003</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>EDG-003</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-modeloml-001">DS-MODELOML-001</a></td>
   </tr>
@@ -227,9 +227,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- EDG-004 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>EDG-004</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>EDG-004</b><br>
+      &nbsp;
     </td>
     <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
   </tr>
@@ -242,16 +242,16 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </tr>
 
   <tr>
-    <th style="width:15%;">Item do RFP</th>
-    <th style="width:85%;">Desenvoltura</th>
+    <th style="width:15%; text-align:left;">Item do RFP</th>
+    <th style="width:85%; text-align:left;">Desenvoltura</th>
   </tr>
 
   <!-- CLD-001 / CLD-002 -->
   <tr>
     <td>
-      <div><b>CLD-001</b></div>
-      <div><b>CLD-002</b></div>
-      <div style="height:0.9em;"></div>
+      <b>CLD-001</b><br>
+      <b>CLD-002</b><br>
+      &nbsp;
     </td>
     <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
   </tr>
@@ -259,9 +259,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- CLD-003 -->
   <tr>
     <td>
-      <div style="height:0.9em;"></div>
-      <div><b>CLD-003</b></div>
-      <div style="height:0.9em;"></div>
+      &nbsp;<br>
+      <b>CLD-003</b><br>
+      &nbsp;
     </td>
     <td>Contido(s) no arquivo <a href="#ds-dadoskpi-001">DS-DADOSKPI-001</a></td>
   </tr>
@@ -269,9 +269,9 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <!-- CLD-004 / CLD-005 -->
   <tr>
     <td>
-      <div><b>CLD-004</b></div>
-      <div><b>CLD-005</b></div>
-      <div style="height:0.9em;"></div>
+      <b>CLD-004</b><br>
+      <b>CLD-005</b><br>
+      &nbsp;
     </td>
     <td>Este item não foi abordado em nenhum diagrama em específico, pois seu comportamento se encapsula em todo o processo produtivo.</td>
   </tr>
