@@ -21,7 +21,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   <tbody>
     <tr>
       <td>MC-001 <br> MC-002 <br> MC-005</td>
-      <td>Contido(s) no arquivo [`DS-PRINCIPAL-001`](#ds-principal-001) </td>
+      <td>Contido(s) no arquivo [`DS-PRINCIPAL-001`](https://github.com/Embrapac/diagramas/blob/test_readme/README.md#ds-principal-001) </td>
     <tr>
   </tbody>
 </table>
