@@ -17,7 +17,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 ## 📑 Índice do projeto:
 
 <!-- ALTERE ESTA LINHA PARA MUDAR O ESTILO DOS TÍTULOS EM TODA A TABELA -->
-<!-- STYLE_TITULO_SECAO = "background:#ffffff; color:#000000; border-bottom:2px solid #ccc;" -->
+<!-- STYLE_TITULO_SECAO = "background:#ffffff; color:#000000; border-bottom:2px solid #a13737ff;" -->
 
 <table style="width:100%; border-collapse:collapse;">
 
