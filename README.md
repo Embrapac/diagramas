@@ -16,17 +16,11 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
 ## 📑 Índice do projeto:
 
-<!-- ALTERE ESTA LINHA PARA MUDAR O ESTILO DOS TÍTULOS EM TODA A TABELA -->
-<!-- STYLE_TITULO_SECAO = "background:#ffffff; color:#000000; border-bottom:2px solid #a13737ff;" -->
-
 <table style="width:100%; border-collapse:collapse;">
 
   <!-- Seção MC -->
   <tr>
-    <th colspan="2"
-        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc;">
-      MC
-    </th>
+    <th colspan="2" style="text-align:center; font-size:1.2em;">MC</th>
   </tr>
 
   <tr>
@@ -104,10 +98,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
   <!-- Seção MIO -->
   <tr>
-    <th colspan="2"
-        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
-      MIO
-    </th>
+    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">MIO</th>
   </tr>
 
   <tr>
@@ -163,10 +154,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
   <!-- Seção MDC -->
   <tr>
-    <th colspan="2"
-        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
-      MDC
-    </th>
+    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">MDC</th>
   </tr>
 
   <tr>
@@ -211,10 +199,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
   <!-- Seção EDG -->
   <tr>
-    <th colspan="2"
-        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
-      EDG
-    </th>
+    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">EDG</th>
   </tr>
 
   <tr>
@@ -270,10 +255,7 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
 
   <!-- Seção CLD -->
   <tr>
-    <th colspan="2"
-        style="text-align:center; font-size:1.2em; background:#ffffff; color:#000000; border-bottom:2px solid #ccc; padding-top:16px;">
-      CLD
-    </th>
+    <th colspan="2" style="text-align:center; font-size:1.2em; padding-top:16px;">CLD</th>
   </tr>
 
   <tr>
@@ -315,7 +297,6 @@ Utilize este comando para compilar todos os arquivos .puml e gerar o vetores svg
   </tr>
 
 </table>
-
 
 
 
