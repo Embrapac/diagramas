@@ -1,0 +1,101 @@
+@startuml
+
+title Edge - Event Stream e Interconexoes
+
+top to bottom direction
+skinparam shadowing false
+skinparam linetype ortho
+skinparam defaultTextAlignment center
+skinparam backgroundColor white
+skinparam packageStyle rectangle
+skinparam ArrowColor #4E5B6E
+skinparam ArrowThickness 1
+skinparam RectangleBorderColor #355070
+skinparam RectangleBackgroundColor #F7F9FC
+skinparam RectangleFontColor #1F2A44
+skinparam RectangleFontSize 14
+skinparam PackageBorderColor #8FA3BF
+skinparam PackageBackgroundColor #FBFCFE
+skinparam PackageFontColor #1F2A44
+skinparam PackageFontSize 15
+skinparam NoteBackgroundColor #FFF7DB
+skinparam NoteBorderColor #D6B656
+
+skinparam nodesep 20
+skinparam ranksep 20
+
+scale max 960 width
+
+package "Entradas" {
+  rectangle "Camera /\nVideo Source" as camera
+  rectangle "MQTT Broker\nTopic: edge/cbelt" as mqtt_in
+  rectangle "MCU / UART\ntelemetria e eventos" as uart_in
+}
+
+package "Nucleo Edge" {
+  rectangle "ModelManager\ncarrega modelo YOLO" as model_mgr
+  rectangle "CaptureWriter\ninferencia + stream" as capture
+
+  queue "detection_queue" as detection_q
+  rectangle "DataAggregator\ncorrelacao UART + visao" as aggregator
+  queue "input_queue" as input_q
+  rectangle "consume_input_events" as consume_input
+  queue "output_queue" as output_q
+  rectangle "process_output" as process_output
+
+  rectangle "PubSubSubscriber\nnormaliza comandos" as mqtt_sub
+  rectangle "UARTSubscriber\ninterpreta frames" as uart_sub
+  rectangle "UARTPublisher\npublica comandos" as uart_pub
+}
+
+package "Saidas" {
+  rectangle "HTTP Stream\nframes anotados" as stream_out
+  rectangle "MQTT Broker\naggregated-metrics" as mqtt_metrics
+  rectangle "MQTT Broker\ncount" as mqtt_count
+  rectangle "MQTT Broker\ncbelt/status" as mqtt_status
+  rectangle "MCU / Atuador\nesteira" as actuator_out
+}
+
+camera --> capture
+model_mgr -[dashed]-> capture : modelo default
+capture --> detection_q : detections
+capture --> stream_out : JPEG
+
+mqtt_in --> mqtt_sub
+mqtt_sub --> input_q : evento normalizado
+input_q --> consume_input
+consume_input --> uart_pub : comando UART
+uart_pub --> actuator_out
+
+uart_in --> uart_sub
+uart_sub --> aggregator : evento UART
+
+detection_q --> aggregator : deteccoes recentes
+aggregator --> output_q : evento agregado
+output_q --> process_output
+
+process_output --> mqtt_metrics : metricas
+process_output --> mqtt_count : classe detectada
+process_output --> mqtt_status : status / emergencia
+
+camera -[hidden]-> mqtt_in
+mqtt_in -[hidden]-> uart_in
+stream_out -[hidden]-> mqtt_metrics
+mqtt_metrics -[hidden]-> mqtt_count
+mqtt_count -[hidden]-> mqtt_status
+mqtt_status -[hidden]-> actuator_out
+
+note bottom of aggregator
+  Centro do event stream:
+  combina deteccoes da camera
+  com eventos recebidos via UART.
+end note
+
+legend bottom
+  Fluxo principal:
+  camera -> detection_queue -> DataAggregator -> output_queue -> MQTT
+  Fluxo de comando:
+  MQTT -> input_queue -> UARTPublisher -> MCU
+end legend
+
+@enduml
